@@ -96,13 +96,14 @@ public class Sorting {
             list.add(a[right]);
             right++;
         }
+        //No need for this conversion, just move elements from List to original array
         //convert list into array
         int arr[] = new int[list.size()];
         for (int i=0;i<list.size();i++) {
             arr[i] = list.get(i);
         }
 
-        //Now after this all unsorted elements are sorted, merged and added into list, so from list add them back to original array
+        //Now after this all unsorted elements are sorted, merged and added into list, so from arr add them back to original array
         for (int i=low;i<=high;i++) {
             a[i] = arr[i-low];
         }
